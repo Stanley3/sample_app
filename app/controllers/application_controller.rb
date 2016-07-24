@@ -3,4 +3,12 @@ class ApplicationController < ActionController::Base
   def hello
     render html: "hello, world!"
   end
+
+  def full_text(title)
+    if title == nil or title.empty?
+      return 'Ruby on Rails Tutorial Sample App'
+    else
+      return ['title', '|', 'Ruby on Rails Tutorial Sample App'].join
+    end
+  end
 end
